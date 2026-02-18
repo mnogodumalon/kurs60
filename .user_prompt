@@ -1,0 +1,10 @@
+Kursverwaltungssystem
+
+Ich brauche eine App um Kurse zu verwalten:
+- Kurse mit Titel, Beschreibung, Startdatum, Enddatum, maximale Teilnehmer, Preis
+- Dozenten die Kurse halten (Name, E-Mail, Telefon, Fachgebiet)
+- Teilnehmer die sich anmelden (Name, E-Mail, Telefon, Geburtsdatum)
+- Räume wo Kurse stattfinden (Raumname, Gebäude, Kapazität)
+- Anmeldungen (welcher Teilnehmer zu welchem Kurs, Anmeldedatum, Bezahlt ja/nein)
+
+Ich will alle diese Daten selbst verwalten können.

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom design tokens */
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-muted: var(--brand-muted);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Cool blue-tinted off-white base */
+  --background: oklch(0.975 0.004 240);
+  --foreground: oklch(0.16 0.015 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.015 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.015 250);
+
+  /* Deep indigo primary */
+  --primary: oklch(0.42 0.18 265);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.95 0.008 240);
+  --secondary-foreground: oklch(0.25 0.02 250);
+  --muted: oklch(0.94 0.006 240);
+  --muted-foreground: oklch(0.52 0.02 255);
+  --accent: oklch(0.93 0.012 255);
+  --accent-foreground: oklch(0.25 0.04 265);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0.01 240);
+  --input: oklch(0.92 0.008 240);
+  --ring: oklch(0.42 0.18 265);
+
+  /* Brand tokens */
+  --brand: oklch(0.42 0.18 265);
+  --brand-soft: oklch(0.88 0.06 265);
+  --brand-muted: oklch(0.96 0.02 265);
+  --surface: oklch(0.975 0.004 240);
+  --surface-raised: oklch(1 0 0);
+
+  /* Charts */
+  --chart-1: oklch(0.42 0.18 265);
+  --chart-2: oklch(0.58 0.16 200);
+  --chart-3: oklch(0.65 0.19 160);
+  --chart-4: oklch(0.72 0.15 80);
+  --chart-5: oklch(0.62 0.22 30);
+
+  /* Sidebar — deep indigo */
+  --sidebar: oklch(0.22 0.06 265);
+  --sidebar-foreground: oklch(0.92 0.02 255);
+  --sidebar-primary: oklch(0.65 0.18 265);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.30 0.06 265);
+  --sidebar-accent-foreground: oklch(0.92 0.02 255);
+  --sidebar-border: oklch(0.30 0.05 265);
+  --sidebar-ring: oklch(0.65 0.18 265);
+
+  /* Custom gradients & shadows */
+  --gradient-hero: linear-gradient(135deg, oklch(0.42 0.18 265), oklch(0.55 0.19 240));
+  --gradient-card-blue: linear-gradient(135deg, oklch(0.42 0.18 265 / 0.1), oklch(0.55 0.19 240 / 0.05));
+  --gradient-card-teal: linear-gradient(135deg, oklch(0.58 0.16 200 / 0.12), oklch(0.65 0.19 160 / 0.06));
+  --gradient-card-amber: linear-gradient(135deg, oklch(0.72 0.15 80 / 0.12), oklch(0.78 0.15 60 / 0.06));
+  --gradient-card-rose: linear-gradient(135deg, oklch(0.62 0.22 30 / 0.12), oklch(0.68 0.2 15 / 0.06));
+  --gradient-card-violet: linear-gradient(135deg, oklch(0.52 0.2 290 / 0.12), oklch(0.6 0.18 275 / 0.06));
+  --shadow-card: 0 1px 3px oklch(0.16 0.02 265 / 0.06), 0 4px 12px oklch(0.16 0.02 265 / 0.04);
+  --shadow-elevated: 0 4px 16px oklch(0.16 0.02 265 / 0.1), 0 1px 4px oklch(0.16 0.02 265 / 0.06);
+  --shadow-brand: 0 8px 24px oklch(0.42 0.18 265 / 0.28);
+  --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-card-blue {
+    background: var(--gradient-card-blue);
+  }
+  .gradient-card-teal {
+    background: var(--gradient-card-teal);
+  }
+  .gradient-card-amber {
+    background: var(--gradient-card-amber);
+  }
+  .gradient-card-rose {
+    background: var(--gradient-card-rose);
+  }
+  .gradient-card-violet {
+    background: var(--gradient-card-violet);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}

@@ -1,0 +1,16 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.6.2
+2 info using node@v24.13.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/user/app/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm root
+7 verbose argv "root" "--global"
+8 verbose logfile logs-max:10 dir:/home/user/app/.npm/_logs/2026-02-18T16_00_48_403Z-
+9 verbose logfile /home/user/app/.npm/_logs/2026-02-18T16_00_48_403Z-debug-0.log
+10 verbose cwd /home/user/app
+11 verbose os Linux 6.1.158
+12 verbose node v24.13.0
+13 verbose npm  v11.6.2
+14 verbose exit 0
+15 info ok
